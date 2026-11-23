@@ -1,0 +1,23 @@
+[project]
+name = "mlops-lab1"
+version = "0.1.0"
+description = "Image processing service with CLI, FastAPI REST API, and CI/CD with GitHub Actions"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "click>=8.5.1",
+    "fastapi>=0.165.0",
+    "jinja2>=3.1.6",
+    "pillow>=13.0.0",
+    "python-multipart>=0.0.34",
+    "uvicorn>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "black>=26.10.1",
+    "httpx>=0.28.1",
+    "pylint>=4.1.4",
+    "pytest>=9.2.0",
+    "pytest-cov>=7.1.0",
+]
