@@ -91,4 +91,3 @@ def rotate_image(image: Image.Image, angle: float) -> Image.Image:
     if not isinstance(angle, (int, float)):
         raise TypeError("Angle must be a number.")
     return image.rotate(float(angle), expand=True)
-
