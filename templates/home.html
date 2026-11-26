@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Processing &amp; Classification API</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #1a1a1a;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+        a {
+            color: #0366d6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .card {
+            background: #f6f8fa;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            padding: 16px;
+            margin-top: 20px;
+        }
+        code {
+            background: #eef1f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Image Processing &amp; Classification API</h1>
+    <p>Test the endpoints of the application in the <a href="/docs">interactive documentation (/docs)</a>.</p>
+    <p>Health check: <a href="/health">/health</a></p>
+    <div class="card">
+        <h3>Available Endpoints</h3>
+        <ul>
+            <li><code>GET /health</code> - Service health check (returns <code>{"status": "ok"}</code>).</li>
+            <li><code>GET /classes</code> - List all supported classification categories.</li>
+            <li><code>POST /predict</code> - Classify an uploaded image (multipart/form-data).</li>
+            <li><code>POST /resize</code> - Resize an uploaded image to given width and height.</li>
+            <li><code>POST /grayscale</code> - Convert an uploaded image to grayscale.</li>
+            <li><code>POST /rotate</code> - Rotate an uploaded image by angle degrees.</li>
+        </ul>
+    </div>
+</body>
+</html>
