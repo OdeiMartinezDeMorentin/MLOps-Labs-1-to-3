@@ -166,4 +166,3 @@ def test_rotate_endpoint_invalid_angle(client: TestClient, sample_jpeg_bytes: by
     data = {"angle": "not-a-number"}
     response = client.post("/rotate", files=files, data=data)
     assert response.status_code == 422
-

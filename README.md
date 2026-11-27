@@ -37,8 +37,23 @@ uv sync --locked
 
 ### Command Line Interface (CLI)
 ```bash
-# Example help
+# Show available commands
 uv run python -m cli.cli --help
+
+# List supported prediction classes
+uv run python -m cli.cli classes
+
+# Predict the class of an image
+uv run python -m cli.cli predict path/to/image.jpg
+
+# Resize an image
+uv run python -m cli.cli resize path/to/image.jpg 200 150 -o resized.jpg
+
+# Convert an image to grayscale
+uv run python -m cli.cli grayscale path/to/image.jpg -o gray.jpg
+
+# Rotate an image
+uv run python -m cli.cli rotate path/to/image.jpg 90 -o rotated.jpg
 ```
 
 ### REST API
@@ -46,11 +61,13 @@ uv run python -m cli.cli --help
 # Run API with auto-reload (default: http://localhost:8000)
 make run-api
 # or:
-uv run uvicorn api.api:app --reload --port 8000
+uv run python -m api.api
 ```
 - API Home: `http://localhost:8000/`
 - Interactive API Documentation (Swagger): `http://localhost:8000/docs`
-- Health check: `http://localhost:8000/health`
+- Health check: `GET http://localhost:8000/health`
+- Supported classes: `GET http://localhost:8000/classes`
+- Prediction & preprocessing (`multipart/form-data`): `POST /predict`, `POST /resize`, `POST /grayscale`, `POST /rotate`
 
 ---
 
