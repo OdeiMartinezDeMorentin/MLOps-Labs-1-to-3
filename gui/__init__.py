@@ -1,2 +1,1 @@
 """Gradio GUI package."""
-

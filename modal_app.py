@@ -34,4 +34,3 @@ def serve():
     from api.api import app as fastapi_app
 
     return fastapi_app
-
