@@ -1,0 +1,32 @@
+# Docker only reads this file at the root of the build context
+
+# Version control and CI
+.git/
+.github/
+.gitignore
+
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Tests, coverage and tooling caches
+tests/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+
+# Parts of the repo that are not part of the API image
+gui/
+gui_app.py
+cli/
+modal_app.py
+pdfs/
+LICENSE
+Makefile
+README.md

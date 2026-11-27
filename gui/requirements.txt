@@ -1,0 +1,3 @@
+# Dependencies of the GUI service (it does not need the rest of the project)
+gradio>=6.0,<7
+requests>=2.32
