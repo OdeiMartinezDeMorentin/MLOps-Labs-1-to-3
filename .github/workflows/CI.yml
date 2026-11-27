@@ -27,3 +27,4 @@ jobs:
 
       - name: Test (with minimum coverage)
         run: make test
+
