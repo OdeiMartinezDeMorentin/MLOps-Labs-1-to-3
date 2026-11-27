@@ -44,3 +44,4 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
 
 # Used by `docker run` (locally and in the CI smoke test). Modal imports FastAPI directly via modal_app.py.
 CMD ["sh", "-c", "exec uvicorn api.api:app --host 0.0.0.0 --port ${PORT}"]
+

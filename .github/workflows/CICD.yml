@@ -128,3 +128,4 @@ jobs:
           MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
           API_URL: ${{ secrets.BACKEND_API_URL }}
         run: uv run --locked modal deploy gui_app.py
+

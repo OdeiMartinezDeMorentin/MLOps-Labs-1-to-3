@@ -98,3 +98,4 @@ def test_gui_missing_file_path():
     with patch.object(gui.requests, "post") as post:
         assert "image file not found" in gui.predict("/nonexistent/image.jpg")
     post.assert_not_called()
+
